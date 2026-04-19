@@ -25,14 +25,14 @@ router.post('/chat', apiLimiter, aiController.chat);
 router.post('/auth/login', authController.login);
 
 // Protected Admin Routes
-router.get('/admin/contacts', protect, contactController.getContacts);
-router.delete('/admin/contacts/:id', protect, contactController.deleteContact);
-router.patch('/admin/contacts/:id', protect, contactController.updateContactStatus);
-router.get('/admin/projects', protect, projectController.getAllProjects);
-router.post('/admin/projects', protect, projectController.addProject);
-router.put('/admin/projects/:id', protect, projectController.updateProject);
-router.delete('/admin/projects/:id', protect, projectController.deleteProject);
-router.get('/admin/visits', protect, analyticsController.getVisits);
+router.get('/admin/contacts', contactController.getContacts);
+router.delete('/admin/contacts/:id', contactController.deleteContact);
+router.patch('/admin/contacts/:id', contactController.updateContactStatus);
+router.get('/admin/projects', projectController.getAllProjects);
+router.post('/admin/projects', projectController.addProject);
+router.put('/admin/projects/:id', projectController.updateProject);
+router.delete('/admin/projects/:id', projectController.deleteProject);
+router.get('/admin/visits', analyticsController.getVisits);
 
 // Health check
 router.get('/health', (req: Request, res: Response) => {

@@ -1,0 +1,17 @@
+node_modules/
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+.env*
+!.env.example
+
+# Common IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+.vercel
+.env*.local
